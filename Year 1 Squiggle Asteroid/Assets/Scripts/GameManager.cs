@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
+    public Transform[] spawnPoints;
+    public GameObject Squiggle;
+
 	// Use this for initialization
 	void Start () {
 		
