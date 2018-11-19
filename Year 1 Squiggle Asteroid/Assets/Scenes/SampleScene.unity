@@ -883,6 +883,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1816762554}
+  - component: {fileID: 1816762555}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -903,6 +904,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1816762555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1816762553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfa334cfaf64df54c8e9d91e9a6f5763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoints:
+  - {fileID: 2126037491}
+  - {fileID: 1740985594}
+  - {fileID: 33407709}
+  - {fileID: 1495322311}
+  - {fileID: 2039225631}
+  - {fileID: 538495171}
+  Squiggle: {fileID: 1796230753199610, guid: 2910a089b3b46884e8a64f559827b489, type: 2}
+  numberOfSquigglesToStart: 4
 --- !u!1 &2039225630
 GameObject:
   m_ObjectHideFlags: 0
