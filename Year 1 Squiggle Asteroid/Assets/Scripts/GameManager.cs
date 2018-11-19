@@ -9,7 +9,10 @@ public class GameManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		//CREATES SQUIGGLES ON THE SPAWN POINTS
+        for(int i = 0; i < spawnPoints.Length; i++) {
+            Instantiate(Squiggle, spawnPoints[i].position, Quaternion.identity);
+        }
 	}
 	
 	// Update is called once per frame
