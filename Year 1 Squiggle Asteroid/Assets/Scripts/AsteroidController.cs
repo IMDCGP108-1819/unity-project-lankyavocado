@@ -25,11 +25,13 @@ public class AsteroidController : MonoBehaviour
     private float AsteroidVelocityY;
     public float constantSpeed;
     public GameObject Arrow;
+    private GameManager gameManager;
+   
 
 
     // Use this for initialization
-    void Start()
-    {
+    void Start(){
+        gameManager = FindObjectOfType<GameManager>();
         currentAsteroidState = AsteroidState.aim;
     }
 
@@ -51,10 +53,12 @@ public class AsteroidController : MonoBehaviour
 
                 break;
             case AsteroidState.wait:
-
+                currentAsteroidState = AsteroidState.endShot;
                 break;
             case AsteroidState.endShot:
-
+                for(int i = 0; i <gameManager.squigglesInScene.Count; i++){
+                    gameManager.squigglesInScene[i].GetComponent<SquiggleMovementController>().currentState = SquiggleMovementController.squiggleState.move;
+                }
                 break;
             default:
                 break;

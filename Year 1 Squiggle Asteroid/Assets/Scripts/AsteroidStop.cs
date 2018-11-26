@@ -29,8 +29,9 @@ public class AsteroidStop : MonoBehaviour
             //RESET THE LEVEL
             //SET THE ASTEROID AS ACTIVE
             AsteroidControl.currentAsteroidState = AsteroidController.AsteroidState.aim;
+            //WAITS UNTIL ALL THE BALLS HAVE LANDED BEFORE IT CAN FIRE AGAIN
 
-            //PART 5 1:33
+            //PART 11
 
         }
     }

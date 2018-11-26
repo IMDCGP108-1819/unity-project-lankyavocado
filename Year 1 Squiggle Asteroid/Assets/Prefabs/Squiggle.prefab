@@ -57,6 +57,9 @@ GameObject:
   - component: {fileID: 212709253430468198}
   - component: {fileID: 114218861243821222}
   - component: {fileID: 114682239028096260}
+  - component: {fileID: 50965062309671614}
+  - component: {fileID: 60401695200972072}
+  - component: {fileID: 114397954229647940}
   m_Layer: 0
   m_Name: Squiggle
   m_TagString: Untagged
@@ -71,13 +74,65 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1796230753199610}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.31, y: 0.278, z: 0}
+  m_LocalPosition: {x: 13.45, y: 3.19, z: 0}
   m_LocalScale: {x: 1.296837, y: 1.296837, z: 1.296837}
   m_Children:
   - {fileID: 224453530417961502}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50965062309671614
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1796230753199610}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1000
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
+--- !u!60 &60401695200972072
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1796230753199610}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.9142857, y: 0.9142857}
+    newSize: {x: 0.9142857, y: 0.9142857}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.25714287, y: 0.2}
+      - {x: -0.4, y: 0.2}
+      - {x: -0.45714286, y: 0.18571429}
+      - {x: -0.45714286, y: -0.15714286}
+      - {x: 0.1, y: -0.21428572}
+      - {x: 0.34285715, y: -0.21428572}
+      - {x: 0.45714286, y: -0.15714286}
+      - {x: 0.45714286, y: 0.15714286}
 --- !u!114 &114218861243821222
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -139,6 +194,18 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 100
+--- !u!114 &114397954229647940
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1796230753199610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d30002b853875fa4a86019f59f903a8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 0
 --- !u!114 &114631265425142052
 MonoBehaviour:
   m_ObjectHideFlags: 1
