@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 
     public Transform[] spawnPoints;
     public GameObject Squiggle;
+    public GameObject extraAsteroidPowerup;
     public int numberOfSquigglesToStart;
     public int level;
     public List<GameObject> squigglesInScene;
@@ -25,13 +26,16 @@ public class GameManager : MonoBehaviour
         {
             for (int i = 0; i < spawnPoints.Length; i++)
             {
-                int SquiggleToCreate = Random.Range(0, 3);
+                int SquiggleToCreate = Random.Range(0, 4);
                 if (SquiggleToCreate == 0)
                 {
                     squigglesInScene.Add(Instantiate(Squiggle, spawnPoints[i].position, Quaternion.identity));
                     //CHANGES THE NUMBER OF SQUIGGLES THAT SPAWN EACH TIME
 
                     numberOfSquigglesCreate++;
+                
+                } else if (SquiggleToCreate == 2){
+                    squigglesInScene.Add(Instantiate(extraAsteroidPowerup, spawnPoints[i].position, Quaternion.identity));
                 }
             }
         }
