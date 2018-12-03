@@ -5,7 +5,8 @@ using UnityEngine;
 public class SquiggleMovementController : MonoBehaviour {
     public enum squiggleState {
         stop,
-        move
+        move,
+        aim
     }
     //REFERENCE TO THE ENUM
     public squiggleState currentState;

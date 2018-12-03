@@ -26,7 +26,8 @@ public class AsteroidController : MonoBehaviour
     public float constantSpeed;
     public GameObject Arrow;
     private GameManager gameManager;
-   
+    private object squiggleState;
+
 
 
     // Use this for initialization
@@ -57,8 +58,11 @@ public class AsteroidController : MonoBehaviour
                 break;
             case AsteroidState.endShot:
                 for(int i = 0; i <gameManager.squigglesInScene.Count; i++){
+                    //ADDED SQUIGGLEMOVEMENTCONTROLLER BECAUSE SQUIGGLE SATE WASNT RECOGNISED
                     gameManager.squigglesInScene[i].GetComponent<SquiggleMovementController>().currentState = SquiggleMovementController.squiggleState.move;
                 }
+                gameManager.PlaceSquiggles();
+                currentAsteroidState = AsteroidState.aim;
                 break;
             default:
                 break;

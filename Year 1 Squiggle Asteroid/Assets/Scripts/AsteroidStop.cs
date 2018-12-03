@@ -28,7 +28,7 @@ public class AsteroidStop : MonoBehaviour
             Asteroid.velocity = Vector2.zero;
             //RESET THE LEVEL
             //SET THE ASTEROID AS ACTIVE
-            AsteroidControl.currentAsteroidState = AsteroidController.AsteroidState.aim;
+            AsteroidControl.currentAsteroidState = AsteroidController.AsteroidState.wait;
             //WAITS UNTIL ALL THE BALLS HAVE LANDED BEFORE IT CAN FIRE AGAIN
 
             //PART 11
