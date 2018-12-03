@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212445214971222768}
   - component: {fileID: 58942459369284218}
   - component: {fileID: 50160982081142932}
+  - component: {fileID: 114738054814815574}
   m_Layer: 0
   m_Name: Extra Asteroid Powerup
   m_TagString: Untagged
@@ -77,6 +78,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.31999996
+--- !u!114 &114738054814815574
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1691248440632410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d30002b853875fa4a86019f59f903a8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 0
 --- !u!212 &212445214971222768
 SpriteRenderer:
   m_ObjectHideFlags: 1

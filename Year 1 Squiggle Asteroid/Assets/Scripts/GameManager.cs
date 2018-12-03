@@ -11,8 +11,9 @@ public class GameManager : MonoBehaviour
     public int numberOfSquigglesToStart;
     public int level;
     public List<GameObject> squigglesInScene;
+    public List<GameObject> AsteroidsInScene;
     private ObjectPool objectPool;
-
+    public int numberOfExtraAsteroidsInRow = 0;
 
     // Use this for initialization
     void Start()
@@ -34,10 +35,12 @@ public class GameManager : MonoBehaviour
 
                     numberOfSquigglesCreate++;
                 
-                } else if (SquiggleToCreate == 2){
+                } else if (SquiggleToCreate == 2 && numberOfExtraAsteroidsInRow == 0){
                     squigglesInScene.Add(Instantiate(extraAsteroidPowerup, spawnPoints[i].position, Quaternion.identity));
-                }
+                    numberOfExtraAsteroidsInRow++;
+                } 
             }
+            numberOfExtraAsteroidsInRow = 0;
         }
     }
 
@@ -52,7 +55,7 @@ public class GameManager : MonoBehaviour
         foreach(Transform position in spawnPoints)
         {
             int SquiggleToCreate = Random.Range(0, 3);
-            if (SquiggleToCreate == 0) {
+            if (SquiggleToCreate == 2 && numberOfExtraAsteroidsInRow == 0) {
                 GameObject Squiggle = objectPool.GetPooledObject("Squiggle");
                 squigglesInScene.Add(Squiggle);
                 if (Squiggle != null)
@@ -61,8 +64,11 @@ public class GameManager : MonoBehaviour
                 Squiggle.SetActive(true);
                
             }
+            numberOfExtraAsteroidsInRow++;
         }
+        numberOfExtraAsteroidsInRow = 0;
     }
+
 }
 
 

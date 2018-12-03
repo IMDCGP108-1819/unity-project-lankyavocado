@@ -18,6 +18,8 @@ public class AsteroidController : MonoBehaviour
     public Rigidbody2D Asteroid;
     private Vector2 mouseStartPosition;
     private Vector2 mouseEndPosition;
+    public Vector2 tempVelocity;
+    public Vector3 AsteroidLaunchPosition;
     public bool didClick;
     public bool didDrag;
     public bool canInteract;
@@ -107,11 +109,12 @@ public class AsteroidController : MonoBehaviour
         mouseEndPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         AsteroidVelocityX = (mouseStartPosition.x - mouseEndPosition.x);
         AsteroidVelocityY = (mouseStartPosition.y - mouseEndPosition.y);
-        Vector2 tempVelocity = new Vector2(AsteroidVelocityX, AsteroidVelocityY).normalized;
+        tempVelocity = new Vector2(AsteroidVelocityX, AsteroidVelocityY).normalized;
         Asteroid.velocity = constantSpeed * tempVelocity;
         if(Asteroid.velocity == Vector2.zero) {
             return;
         }
+        AsteroidLaunchPosition = transform.position;
         currentAsteroidState = AsteroidState.fire;
     }
     
